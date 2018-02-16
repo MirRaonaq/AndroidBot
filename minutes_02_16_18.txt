@@ -1,0 +1,43 @@
+Date: 02/16/2018 @ 4:00 pm
+Memebers present: 
+	- Kemo Khan
+	- Fatin Nazat
+	- Ziang Zhao
+	- Wentao Chen
+	- Mir Raonaq
+Meeting Discussions:
+	- Next meeting date
+	- The UI design of the app home page
+	- The overrall required components of the application
+	- Each component's layout/design
+	- Components transition 
+	
+	
+Individual Contributions since last meeting:
+	Kemo 
+		- Worked on the minutes
+		- Create the project in android studio
+	Mir 
+		- Setup the project repository
+		- As the repository owner, fixed the neccessary requirements for the repository
+	Fatin:
+		- Create the project in android studio
+	Wentao:
+		- Create the project in android studio
+	Ziang:
+		- Create the project in android studio
+		
+Individual Expected Contributions before next meeting:
+	Kemo 
+		BackEnd: Setup the app database for login and registration
+	Fatin
+		Create the a video to for the app demo
+	Mir 
+		Work on the frontEnd-buttons, image image view etc
+	Ziang 
+		Work on the frontEnd of inner activitity - 'confirm post'
+	Wentao 
+		Work on the frontEnd of inner activity - 'post/food claimed'
+
+		
+		
