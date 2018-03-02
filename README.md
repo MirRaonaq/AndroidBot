@@ -1,5 +1,5 @@
 # Team AndroidBots
-## Food Basket
+
 ## Food Basket
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/AndroidBots/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -12,17 +12,20 @@ An android app that helps to find and share leftover food and items with others 
 
 "I have a chair that I don't need it but it could be useful for someone else."
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/AndroidBots/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+"There's always leftovers after the event, someone must want it."
 
-### Project Description
+MVP(Minimum Viable Product)
 
-Food Basket is for free food and items.
+Food Basket is an android app that helps user to share and find any leftover food. A user would be able to take a picture of the food along with a description such as building and room number and share it with others. Other users would be notified of the location and can view the picture the food. Then they will have the ability to vote whether the food is claimed or report as fake.
 
-Suppose you are at an event and at the end there are pizza slices left. Instead of it going to waste, you can share the food with the community or people near you. Food Basket allows you to snap a picture of the food, then give a description, and location such as building, room number, and quantity. Users nearby will receive a notification of the food and will have the chance to claim it.
+Add-on Features:
 
-This same process also works with unwanted items such as furniture, books, and more.
+Ability to moderate fraud/fake activities
 
-=======
+Users would be able to register an account with the app
+
+Android smart watch compatibility.
+
 Ability to use within a group instead of location. For example to only share location of food or item within a dorm hall.
 
 **Add-on Features:**
@@ -69,28 +72,6 @@ Ability to use within a group instead of location. For example to only share loc
 
 3. Android smart watch compatibility.
 
-4. Ability to use within a group instead or location. For example to only share location of food or item within a dorm hall or with a group of friends.
+4. Ability to use within a group instead of location. For example to only share location of food or item within a dorm hall.
 
-5. A sell section, able to quickly sell food or items for cash.
-
-6. Food Basket for iOS.
-
-
-**Prototype**:
-https://www.youtube.com/watch?v=X_XTFI-sr04
-
-**How to Run Prototype**
-
-1.	First download Android Studio from here: https://developer.android.com/studio/index.html
-
-2.	Copy the repository link and paste into Android Studio version control then clone:
-
-![](images/one.png)
-![](images/two.png)
-
-3. Once gradle has finished building the project click the green play “Run” button. Then pick any virtual device as shown below:
-
-![](images/three.png)
-
-Also, if you have an android device, enable “USB debugging” from developer option. Then run the app on your phone.
-
+5. Able to quickly sell food or items for cash. 

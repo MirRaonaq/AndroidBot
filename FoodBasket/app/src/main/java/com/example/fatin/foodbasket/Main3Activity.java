@@ -30,7 +30,6 @@ public class Main3Activity extends AppCompatActivity {
     private EditText Name;
     private EditText Password;
     private Button Login;
-    private Button Register;
     private TextView Info;
     private int counter = 5;
     FirebaseDatabase fBase;
@@ -44,10 +43,12 @@ public class Main3Activity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Name = (EditText) findViewById(R.id.etName);
-        Password = (EditText) findViewById(R.id.etPassword);
-        Login = (Button) findViewById(R.id.btnLogin);
-        Register = (Button) findViewById(R.id.btnReg);
+        Name = (EditText)findViewById(R.id.etName);
+        Password = (EditText)findViewById(R.id.etPassword);
+        Login = (Button)findViewById(R.id.btnLogin);
+        Info = (TextView)findViewById(R.id.tvInfo);
+
+
 
 
         Info.setText("No of attempts remaining: 5");
@@ -55,14 +56,7 @@ public class Main3Activity extends AppCompatActivity {
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                validate(Name.getText().toString(), Password.getText().toString());
-            }
-        });
-
-        Register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                main5();
+                validate(Name.getText().toString(),Password.getText().toString());
             }
         });
 
@@ -76,8 +70,6 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
     }
-
-
 
     private void validate(String userName, String userPassword){
         final  FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -128,7 +120,6 @@ public class Main3Activity extends AppCompatActivity {
             Intent intent = new Intent(Main3Activity.this,MainActivity.class);
             startActivity(intent);
         }else{
-            Toast.makeText(this, "Incorrect Username or Password", Toast.LENGTH_SHORT).show();
             AlertDialog.Builder alert =  new AlertDialog.Builder(this);
             alert.setTitle("Invalid Credentials.\nPlease, Enter Password Again. Attemps remain:"+ String.valueOf(counter));
             alert.setPositiveButton("Try Again", new DialogInterface.OnClickListener() {
@@ -154,11 +145,6 @@ public class Main3Activity extends AppCompatActivity {
                 Login.setEnabled(false);
             }
         }
-    }
-
-    public void main5(){
-        Intent intent= new Intent(Main3Activity.this,Main5Activity.class);
-        startActivity(intent);
     }
 
 }
