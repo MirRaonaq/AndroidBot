@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Tue Feb 27 20:16:56 EST 2018
+0.baseType=DIRECTORY
+0.base=C\:\\Users\\kemok\\Desktop\\Spring2018\\CSE_442\\project\\AndroidBots\\FoodBasket\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.path=classes.dex
+0.set=DEX
+count=1

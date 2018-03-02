@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "871450039178",
+    "firebase_url": "https://foodbasket-992d8.firebaseio.com",
+    "project_id": "foodbasket-992d8",
+    "storage_bucket": "foodbasket-992d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871450039178:android:d1c1b1cad2db3c17",
+        "android_client_info": {
+          "package_name": "com.example.fatin.foodbasket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871450039178-j4k4qc5v2hp3qv30c5u7sle8ulhgh38p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fatin.foodbasket",
+            "certificate_hash": "0777e3e7fc8a04548543e7ff35a2316358edca37"
+          }
+        },
+        {
+          "client_id": "871450039178-gtiuvioug0tfgcdldmfjt82n6jqd0ii0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe7MtLLdWTXmbqQHt_HJZBqUJ_e6XNTiA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871450039178-gtiuvioug0tfgcdldmfjt82n6jqd0ii0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

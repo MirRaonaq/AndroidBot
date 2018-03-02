@@ -38,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
     LocationRequest locationRequest;
     LocationSettingsRequest.Builder locationSettingsRequest;
 
-
-
     @Override
     protected void onCreate(@NonNull Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Main2Activity();
+                main2Activity();
                 //Log.d is to see if the button is actually working or not
                 Log.d("FoodBasket", "Share button pressed");
             }
@@ -98,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void Main2Activity(){
+    public void main2Activity(){
 
         //Open the user input page or second acitivity
         Intent intent = new Intent(this,Main2Activity.class);
