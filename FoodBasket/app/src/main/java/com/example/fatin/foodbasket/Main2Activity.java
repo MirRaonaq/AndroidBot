@@ -30,6 +30,8 @@ public class Main2Activity extends AppCompatActivity {
                     startActivity(new Intent(Main2Activity.this, MainActivity.class));
                 } else if (i == 2) {
                     startActivity(new Intent(Main2Activity.this, Main3Activity.class));
+                } else if (i == 3){
+                    startActivity(new Intent(Main2Activity.this, Main7Activity.class));
                 }
             }
 

@@ -8,16 +8,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-public class Main4Activity extends AppCompatActivity {
+public class Main7Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
-
+        setContentView(R.layout.activity_main7);
         Spinner mySpinner = (Spinner) findViewById(R.id.spinner1);
 
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(Main4Activity.this,
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(Main7Activity.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner.setAdapter(myAdapter);
@@ -26,11 +25,11 @@ public class Main4Activity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 1) {
-                    startActivity(new Intent(Main4Activity.this, MainActivity.class));
+                    startActivity(new Intent(Main7Activity.this, MainActivity.class));
                 } else if (i == 2) {
-                    startActivity(new Intent(Main4Activity.this, Main3Activity.class));
-                } else if (i==3){
-                    startActivity(new Intent(Main4Activity.this, Main7Activity.class));
+                    startActivity(new Intent(Main7Activity.this, Main3Activity.class));
+                } else if (i ==3){
+                    startActivity(new Intent(Main7Activity.this, Main7Activity.class));
                 }
             }
 

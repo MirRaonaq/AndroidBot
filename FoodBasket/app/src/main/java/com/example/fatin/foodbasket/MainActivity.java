@@ -60,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, MainActivity.class));
                 } else if (i == 2) {
                     startActivity(new Intent(MainActivity.this, Main3Activity.class));
+                } else if (i ==3){
+                    startActivity(new Intent(MainActivity.this, Main7Activity.class));
                 }
             }
 
