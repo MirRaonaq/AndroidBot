@@ -46,6 +46,7 @@
         <activity android:name="com.example.fatin.foodbasket.Main4Activity" />
         <activity android:name="com.example.fatin.foodbasket.Main5Activity" />
         <activity android:name="com.example.fatin.foodbasket.Main6Activity" />
+        <activity android:name="com.example.fatin.foodbasket.Main7Activity" />
 
         <meta-data
             android:name="android.support.VERSION"

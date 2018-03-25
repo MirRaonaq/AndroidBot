@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-30:12
+ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-32:12
 MERGED from [com.google.android.gms:play-services-location:11.8.0] /Users/Mir/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/f513d78f1526035ccb2ea5709563ec1e/AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/Mir/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/966fd11608658ee1a060d65f71d80ade/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:design:26.1.0] /Users/Mir/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6eac9c78e982e532807612ea67a218d9/AndroidManifest.xml:17:1-31:12
@@ -43,20 +43,20 @@ MERGED from [com.google.firebase:firebase-iid-license:11.8.0] /Users/Mir/.gradle
 MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] /Users/Mir/.gradle/caches/transforms-1/files-1.1/firebase-analytics-license-11.8.0.aar/c13656f2eb7db69ad070d4bb13685cbb/AndroidManifest.xml:2:1-6:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/Mir/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/48e6f41e088438322e9e7f461ed2d79b/AndroidManifest.xml:17:1-30:12
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] /Users/Mir/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-license-11.8.0.aar/8641c72148e8994eec9629dee2daa98a/AndroidManifest.xml:2:1-6:12
-INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-32:12
 	package
 		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:3:5-43
 		INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml
-		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-30:12
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-32:12
 		INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml
-		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-30:12
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:1-32:12
 		INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:2:11-69
@@ -65,7 +65,7 @@ ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifes
 	android:name
 		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:5:22-78
 application
-ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:6:5-28:19
+ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:7:5-30:19
 MERGED from [com.google.android.gms:play-services-location:11.8.0] /Users/Mir/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/f513d78f1526035ccb2ea5709563ec1e/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:11.8.0] /Users/Mir/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/f513d78f1526035ccb2ea5709563ec1e/AndroidManifest.xml:7:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/Mir/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/966fd11608658ee1a060d65f71d80ade/AndroidManifest.xml:9:5-20
@@ -141,55 +141,59 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/Mir/.gradle/caches/tra
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] /Users/Mir/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-license-11.8.0.aar/8641c72148e8994eec9629dee2daa98a/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] /Users/Mir/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-license-11.8.0.aar/8641c72148e8994eec9629dee2daa98a/AndroidManifest.xml:5:5-20
 	android:supportsRtl
-		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:11:9-35
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:9:9-41
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:10:9-54
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:11:9-54
 	android:icon
-		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:8:9-43
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:7:9-35
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:12:9-40
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:13:9-40
 activity#com.example.fatin.foodbasket.Main3Activity
-ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:13:9-19:20
+ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:14:9-20:20
 	android:name
-		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:13:19-48
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:14:19-48
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:14:13-18:29
+ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN
-ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:15:17-69
+ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:16:17-69
 	android:name
-		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:15:25-66
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:16:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:17:17-77
+ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:17:27-74
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:18:27-74
 activity#com.example.fatin.foodbasket.Main2Activity
-ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:20:9-51
+ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:21:9-51
 	android:name
-		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:20:19-48
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:21:19-48
 activity#com.example.fatin.foodbasket.MainActivity
-ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:21:9-24:47
+ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:22:9-25:47
 	android:label
-		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:23:13-57
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:24:13-57
 	android:theme
-		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:24:13-44
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:25:13-44
 	android:name
-		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:22:13-41
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:23:13-41
 activity#com.example.fatin.foodbasket.Main4Activity
-ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:25:9-51
-	android:name
-		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:25:19-48
-activity#com.example.fatin.foodbasket.Main5Activity
 ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:26:9-51
 	android:name
 		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:26:19-48
-activity#com.example.fatin.foodbasket.Main6Activity
-ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:27:9-60
+activity#com.example.fatin.foodbasket.Main5Activity
+ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:27:9-51
 	android:name
 		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:27:19-48
+activity#com.example.fatin.foodbasket.Main6Activity
+ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:28:9-51
+	android:name
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:28:19-48
+activity#com.example.fatin.foodbasket.Main7Activity
+ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:29:9-60
+	android:name
+		ADDED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml:29:19-48
 uses-sdk
 INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/Mir/Desktop/AndroidBots/FoodBasket/app/src/main/AndroidManifest.xml

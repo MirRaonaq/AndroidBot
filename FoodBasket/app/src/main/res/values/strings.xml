@@ -12,9 +12,10 @@
     <string name="typeSomething">testing input box</string>-->
 
     <string-array name="names">
-        <item>Please select a value</item>
+        <item>Options</item>
         <item>Home</item>
         <item>Logout</item>
+        <item>Deactivate Account</item>
     </string-array>
 
 
