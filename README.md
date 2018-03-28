@@ -46,6 +46,9 @@ Food Basket is an android app that helps users share and find any leftover food 
 **Prototype**:
 https://www.youtube.com/watch?v=X_XTFI-sr04
 
+**Alpha Release**:
+https://www.youtube.com/watch?v=XYYHNZdhbGs&t=2s
+
 **How to Run Prototype**
 
 1.	First download Android Studio from here: https://developer.android.com/studio/index.html
