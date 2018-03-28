@@ -1,4 +1,5 @@
 #Internal package file, do not edit.
+<<<<<<< HEAD
 #Sun Mar 04 21:20:57 EST 2018
 2.base=/Users/Mir/Desktop/AndroidBots/FoodBasket/app/build/intermediates/transforms/dexMerger/debug/16
 5.set=DEX
@@ -20,8 +21,11 @@ count=6
 1.baseType=DIRECTORY
 5.path=classes.dex
 0.base=/Users/Mir/Desktop/AndroidBots/FoodBasket/app/build/intermediates/transforms/dexMerger/debug/14
+=======
+#Sun Mar 25 15:16:54 EDT 2018
+>>>>>>> kemokhan
 0.baseType=DIRECTORY
-3.set=DEX
-1.base=/Users/Mir/Desktop/AndroidBots/FoodBasket/app/build/intermediates/transforms/dexMerger/debug/17
-4.baseType=DIRECTORY
+0.base=C\:\\Users\\kemok\\Desktop\\Spring2018\\CSE_442\\project\\AndroidBots\\FoodBasket\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.path=classes.dex
 0.set=DEX
+count=1

@@ -1,18 +1,12 @@
 package com.example.fatin.foodbasket;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -21,7 +15,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,6 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Main3Activity extends AppCompatActivity {
+
 
     private EditText name;
     private EditText password;
@@ -40,19 +34,26 @@ public class Main3Activity extends AppCompatActivity {
     FirebaseDatabase fBase;
     DatabaseReference dataRef;
 
+    String _user_email ="";
+    String _pasword="";
+    String val;
+
+    ProgressDialog progressDialog;
+
     //authentication variable
     FirebaseAuth firebaseAuth = null;
     FirebaseAuth.AuthStateListener authStateListener;
 
     String TAG = "MAIN_TEST";
 
+   // static ArrayList<String> email_ =new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.login_main);
 
         HideKeyBoard.hideKeyPad(findViewById(R.id.home), Main3Activity.this);
-
         name = (EditText) findViewById(R.id.etName);
         password = (EditText) findViewById(R.id.etPassword);
         login = (Button) findViewById(R.id.btnLogin);
@@ -60,6 +61,7 @@ public class Main3Activity extends AppCompatActivity {
 
         //instantiate firebaseauth
         firebaseAuth = FirebaseAuth.getInstance();
+
 
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -83,26 +85,17 @@ public class Main3Activity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String _user_email = name.getText().toString();
-                String _pasword = password.getText().toString();
-                if (ValidateFieldInput.fieldsNotEmpty(_user_email, _pasword)) {
-                    firebaseAuth.signInWithEmailAndPassword(_user_email, _pasword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (!task.isSuccessful()) {
-                                password.setText("");
-                                inValidLogin();
-                            } else {
-                                //  Intent intent = new Intent(Main3Activity.this,MainActivity.class);
-                                //  startActivity(intent);
-                            }
+                _user_email = name.getText().toString().trim();
+                _pasword = password.getText().toString();
+                String ret;
+                if (_user_email.contains("@")){
+                    loginUserWithEmail(_user_email,_pasword);
 
-                        }
-                    });
-                } else {
-                    password.setText("");
-                    inValidLogin();
+                }else {
+                    loginUserWithUserName(_user_email, _pasword);
+                    Log.d(TAG, "onClick: email return email");
                 }
+
             }
         });
 
@@ -113,6 +106,82 @@ public class Main3Activity extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    private void loginUserWithEmail(String uemail, String pword) {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("login in progress...");
+        progressDialog.show();
+        if (ValidateFieldInput.fieldsNotEmpty(uemail, pword)) {
+            firebaseAuth.signInWithEmailAndPassword(uemail, pword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (!task.isSuccessful()) {
+                        password.setText("");
+                        progressDialog.dismiss();
+                        inValidLogin();
+                    } else {
+                        progressDialog.dismiss();
+                        //  Intent intent = new Intent(Main3Activity.this,MainActivity.class);
+                        //  startActivity(intent);
+                    }
+
+                }
+            });
+        } else {
+            password.setText("");
+            progressDialog.dismiss();
+            inValidLogin();
+        }
+    }
+
+    private void loginUserWithUserName(final String user_email, final String pword) {
+        progressDialog= new ProgressDialog(this);
+        progressDialog.setMessage("login in progress...");
+        progressDialog.show();
+        final DatabaseReference user = FirebaseDatabase.getInstance().getReference("users").child(user_email);
+        //String val;
+        user.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                try {
+                    String retVal=dataSnapshot.child("email").getValue().toString();
+                   // Log.d(TAG, "onDataChange: "+retVal);
+                    if (ValidateFieldInput.fieldsNotEmpty(retVal, pword)) {
+                        firebaseAuth.signInWithEmailAndPassword(retVal, pword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (!task.isSuccessful()) {
+                                    password.setText("");
+                                    progressDialog.dismiss();
+                                    inValidLogin();
+                                } else {
+                                    progressDialog.dismiss();
+                                    //  Intent intent = new Intent(Main3Activity.this,MainActivity.class);
+                                    //  startActivity(intent);
+                                }
+
+                            }
+                        });
+                    } else {
+                        password.setText("");
+                        progressDialog.dismiss();
+                        inValidLogin();
+                    }
+                }catch (Exception ex){
+                    password.setText("");
+                    Toast.makeText(Main3Activity.this, "The entered user name doesn't exist", Toast.LENGTH_LONG).show();
+
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
 
     }
 
@@ -136,11 +205,11 @@ public class Main3Activity extends AppCompatActivity {
 
 
     public void signup() {
-        Intent intent = new Intent(Main3Activity.this, Main5Activity.class);
+        Intent intent = new Intent(Main3Activity.this, Register.class);
         startActivity(intent);
     }
     public void main6Activity(){
-        Intent intent = new Intent(Main3Activity.this, Main6Activity.class);
+        Intent intent = new Intent(Main3Activity.this, ResetPassWord.class);
         startActivity(intent);
     }
 

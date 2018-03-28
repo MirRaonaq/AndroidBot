@@ -5,13 +5,19 @@
     android:versionName="1.0" >
 
     <uses-sdk
+        android:maxSdkVersion="26"
         android:minSdkVersion="21"
         android:targetSdkVersion="26" />
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
-    <!-- Required permission for App measurement to run. -->
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
@@ -21,6 +27,8 @@
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.example.fatin.foodbasket.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -38,15 +46,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.fatin.foodbasket.Main2Activity" />
+        <activity
+            android:name="com.example.fatin.foodbasket.ImageCapture"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity
             android:name="com.example.fatin.foodbasket.MainActivity"
             android:label="@string/title_activity_main3"
             android:theme="@style/AppTheme" />
+<<<<<<< HEAD
         <activity android:name="com.example.fatin.foodbasket.Main4Activity" />
         <activity android:name="com.example.fatin.foodbasket.Main5Activity" />
         <activity android:name="com.example.fatin.foodbasket.Main6Activity" />
         <activity android:name="com.example.fatin.foodbasket.Main7Activity" />
+=======
+        <activity android:name="com.example.fatin.foodbasket.PostedImages" />
+        <activity android:name="com.example.fatin.foodbasket.Register" />
+        <activity android:name="com.example.fatin.foodbasket.ResetPassWord" />
+>>>>>>> kemokhan
 
         <meta-data
             android:name="android.support.VERSION"
@@ -69,10 +85,6 @@
             android:exported="true"
             android:launchMode="singleInstance"
             android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <receiver
@@ -128,9 +140,20 @@
             android:exported="false"
             android:initOrder="100" />
 
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.fatin.foodbasket.com.squareup.picasso"
+            android:exported="false" />
+
         <meta-data
             android:name="android.arch.lifecycle.VERSION"
             android:value="27.0.0-SNAPSHOT" />

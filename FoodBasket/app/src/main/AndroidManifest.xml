@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fatin.foodbasket">
-
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:maxSdkVersion="26"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<<<<<<< HEAD
+=======
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+>>>>>>> kemokhan
 
     <application
         android:allowBackup="true"
@@ -18,15 +27,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity" />
+        <activity android:name=".ImageCapture"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            />
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main3"
             android:theme="@style/AppTheme" />
+<<<<<<< HEAD
         <activity android:name=".Main4Activity" />
         <activity android:name=".Main5Activity" />
         <activity android:name=".Main6Activity" />
         <activity android:name=".Main7Activity"></activity>
+=======
+        <activity android:name=".PostedImages" />
+        <activity android:name=".Register" />
+        <activity android:name=".ResetPassWord"></activity>
+>>>>>>> kemokhan
     </application>
 
 </manifest>

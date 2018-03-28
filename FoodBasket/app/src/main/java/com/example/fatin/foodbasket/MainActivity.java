@@ -1,11 +1,7 @@
 package com.example.fatin.foodbasket;
 
-import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.IntentSender;
-import android.location.Address;
-import android.location.Geocoder;
-import android.nfc.Tag;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,19 +11,18 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.AdapterView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.PendingResult;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.LocationSettingsRequest;
-import com.google.android.gms.location.LocationSettingsResult;
-import com.google.android.gms.location.LocationSettingsStates;
-import com.google.android.gms.location.LocationSettingsStatusCodes;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity {
 
     AppLocationServices locationServices;
@@ -41,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
     Button logoutBtn=null;
     Button claimeBtn=null;
 
+    TextView profile;
+    FirebaseUser user;
+
+
     @Override
     protected void onCreate(@NonNull Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,15 +52,33 @@ public class MainActivity extends AppCompatActivity {
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner.setAdapter(myAdapter);
 
+        profile =(TextView)findViewById(R.id.profile);
+
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        String currUser = user.getEmail();
+        String u = currUser.split("@")[0];
+        profile.setText(u);
+        //Toast.makeText(this,"current user is "+user,Toast.LENGTH_LONG).show();
+
+
         mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 1) {
-                    startActivity(new Intent(MainActivity.this, MainActivity.class));
+                  //  startActivity(new Intent(MainActivity.this, MainActivity.class));
                 } else if (i == 2) {
+                    FirebaseAuth.getInstance().signOut();
+                    finish();
                     startActivity(new Intent(MainActivity.this, Main3Activity.class));
+<<<<<<< HEAD
                 } else if (i ==3){
                     startActivity(new Intent(MainActivity.this, Main7Activity.class));
+=======
+                }else if (i==3){
+                    deactivateAccount();
+
+
+>>>>>>> kemokhan
                 }
             }
 
@@ -99,7 +116,44 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    private void deactivateAccount() {
 
+       //final FirebaseUser uid = user;
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        if (user !=null){
+            progressDialog.setMessage("Deleting account...");
+            progressDialog.show();
+            try {
+                user.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()){
+                            progressDialog.dismiss();
+                            startActivity(new Intent(MainActivity.this, Main3Activity.class));
+                            Toast.makeText(MainActivity.this,"Deactivation was successful",Toast.LENGTH_LONG).show();
+                        }
+
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        progressDialog.dismiss();
+                        Toast.makeText(MainActivity.this,"Error",Toast.LENGTH_LONG).show();
+
+                    }
+                });
+            }catch (Exception e){
+                progressDialog.dismiss();
+                Toast.makeText(MainActivity.this,"Error",Toast.LENGTH_LONG).show();
+            }
+
+        }else {
+            Toast.makeText(MainActivity.this,"No user is loggin!!",Toast.LENGTH_LONG).show();
+
+        }
+
+
+    }
     @Override
     protected void onResume() {
         super.onResume();
@@ -122,12 +176,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void main2Activity(){
-        Intent intent = new Intent(this,Main2Activity.class);
+        Intent intent = new Intent(this,ImageCapture.class);
         startActivity(intent);
 
     }
     public void Main4Activity(){
-        Intent intent4 = new Intent(this,Main4Activity.class);
+        Intent intent4 = new Intent(this,PostedImages.class);
         startActivity(intent4);
 
     }
