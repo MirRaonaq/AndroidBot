@@ -103,7 +103,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
 
             //REFERENCE: https://stackoverflow.com/questions/36838410/check-if-id-exists-in-firebase-android-java
             DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
-            ref.child("users").child("username").addListenerForSingleValueEvent(new ValueEventListener() {
+            ref.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
 
                 @Override
                 public void onDataChange(DataSnapshot snapshot) {
