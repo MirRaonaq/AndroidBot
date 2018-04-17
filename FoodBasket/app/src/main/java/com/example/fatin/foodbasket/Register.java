@@ -43,7 +43,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
     FirebaseAuth firebaseAuth =null;
     static String TAG ="HELL0";
     //boolean userIScreated =false;
-
+    boolean usernameAvailable;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +58,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
         firebaseAuth=FirebaseAuth.getInstance();
         register_btn.setOnClickListener(this);
         user_name =(EditText)findViewById(R.id.username);
-       // user_pass_reEntered =(EditText) findViewById(R.id.reEnterPassword);
+        // user_pass_reEntered =(EditText) findViewById(R.id.reEnterPassword);
 
         //final String pass = user_pass_reEntered.getText().toString().trim();
         //final String iniPass =user_password.getText().toString().trim();
@@ -100,10 +100,31 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
         if(ValidateFieldInput.fieldsNotEmpty(userEmail,userPassword,userName)){
             progressDialog.setTitle("Registration in progress...");
             progressDialog.show();
+
+            //REFERENCE: https://stackoverflow.com/questions/36838410/check-if-id-exists-in-firebase-android-java
+            DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+            ref.child("users").child("username").addListenerForSingleValueEvent(new ValueEventListener() {
+
+                @Override
+                public void onDataChange(DataSnapshot snapshot) {
+                    if (snapshot.exists()) {
+                        //Handle the case where the username already exists!
+                        usernameAvailable = false;
+                    }
+                    else {
+                        //Handle the case where the username does not yet exist
+                        usernameAvailable = true;
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) { }
+            });
+
             firebaseAuth.createUserWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()){
+                    if (task.isSuccessful() && usernameAvailable){
                         progressDialog.dismiss();
                         final FirebaseDatabase database = FirebaseDatabase.getInstance();
                         final DatabaseReference ref = database.getReference("users");
@@ -114,6 +135,11 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
                         Intent intent = new Intent(Register.this, Main3Activity.class);
                         startActivity(intent);
 
+                    }else if(!usernameAvailable){
+                        progressDialog.dismiss();
+                        user_email.setText("");
+                        user_password.setText("");
+                        Toast.makeText(Register.this,"Username is not available.", Toast.LENGTH_LONG).show();
                     }else {
                         progressDialog.dismiss();
                         user_email.setText("");
@@ -125,9 +151,9 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
             });
         }else {
             progressDialog.dismiss();
-           Toast.makeText(Register.this,"Input field cannot be empty.", Toast.LENGTH_LONG).show();
+            Toast.makeText(Register.this,"Input field cannot be empty.", Toast.LENGTH_LONG).show();
 
-       }
+        }
     }
 
     private boolean checkIfAcountAlreadyExist(final String userEmail, final String userName) {
@@ -137,7 +163,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 try {
-                   // created=true;
+                    // created=true;
 
                 }catch (Exception e){
                     DatabaseReference username_1 = user.child(userName);
