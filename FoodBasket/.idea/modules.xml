@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FoodBasket.iml" filepath="$PROJECT_DIR$/FoodBasket.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\JonHiggins\Documents\GitHub\AndroidBots\FoodBasket\app\app.iml" filepath="C:\Users\JonHiggins\Documents\GitHub\AndroidBots\FoodBasket\app\app.iml" />
     </modules>
   </component>
 </project>

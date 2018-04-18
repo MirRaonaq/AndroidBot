@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:lineSpacingExtra="8sp"
+        android:text="Food Basket is for free food and items.  Suppose you are at an event and at the end there are pizza slices left. Instead of it going to waste, you can share the food with the community or people near you. Food Basket allows you to snap a picture of the food, then give a description, such as building, room number, and quantity. Users nearby will receive a notification of the food and will have the chance to claim it. This same process also works with unwanted items such as furniture, books, and more.  "
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textStyle="bold" />
+</LinearLayout>
