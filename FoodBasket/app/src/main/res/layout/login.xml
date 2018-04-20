@@ -19,6 +19,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/edit_text_border"
         android:ems="10"
+        android:fontFamily="@font/montserrat"
         android:hint="Enter Full Email"
         android:inputType="textPersonName"
         android:paddingLeft="5pt"
@@ -37,6 +38,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/register_btn"
+        android:fontFamily="@font/wellfleet"
         android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,6 +56,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/edit_text_border"
         android:ems="10"
+        android:fontFamily="@font/montserrat"
         android:hint="Password"
         android:inputType="textPassword"
         android:paddingLeft="5pt"
@@ -84,13 +87,9 @@
         android:id="@+id/btnReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Register"
         android:background="@drawable/register_btn"
-        />
+        android:fontFamily="@font/wellfleet"
+        android:text="Register" />
 
     <Button
         android:id="@+id/btnForgot"
@@ -101,6 +100,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/register_btn"
+        android:fontFamily="@font/wellfleet"
         android:text="Forgot Password?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
