@@ -34,20 +34,29 @@
             android:id="@+id/post_building_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
             android:padding="10dp"
+            android:textSize="15sp"
+            android:autoSizeTextType="uniform"
             android:textColor="#050505" />
 
         <TextView
             android:id="@+id/post_room_num"
+            android:autoSizeTextType="uniform"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
             android:padding="10dp"
+            android:textSize="15sp"
             android:textColor="#020202" />
 
         <TextView
             android:id="@+id/post_description"
             android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:autoSizeTextType="uniform"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
             android:hint="description"
             android:padding="10dp"
             android:textColor="#050505" />

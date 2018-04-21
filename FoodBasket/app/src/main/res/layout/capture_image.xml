@@ -30,11 +30,10 @@
                 android:layout_height="200dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:layout_marginLeft="15pt"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
                 android:contentDescription="@string/_image"
-
-
-                app:srcCompat="@android:color/background_light" />
+                app:srcCompat="@drawable/no_image" />
 
             <TextView
                 android:id="@+id/topText"
@@ -46,6 +45,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="75dp"
+                android:fontFamily="@font/aclonica"
                 android:text="Enter the following"
                 android:textColor="@android:color/black"
                 android:textSize="30sp"
@@ -67,6 +67,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:ems="10"
+                android:fontFamily="@font/montserrat"
                 android:hint="Building name"
                 android:inputType="textPersonName"
                 android:textColor="@android:color/background_dark"
@@ -88,6 +89,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:ems="10"
+                android:fontFamily="@font/montserrat"
                 android:hint="Room number"
                 android:inputType="textPersonName"
                 android:textColor="@android:color/black"
@@ -109,6 +111,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:ems="10"
+                android:fontFamily="@font/montserrat"
                 android:hint="Description"
                 android:inputType="textPersonName"
                 android:textColor="@android:color/black"
@@ -130,7 +133,10 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="SHARE"
+                android:fontFamily="@font/wellfleet"
+                android:background="@drawable/register_btn"
                 android:textSize="24sp"
+                android:textColor="#ffff"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
